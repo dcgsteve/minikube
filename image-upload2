@@ -2,6 +2,6 @@
 
 virtctl image-upload --uploadproxy-url=https://127.0.0.1:8443 \
   --insecure \
-  --pvc-name=w2k16-g2-steve.qcow2 \
+  --pvc-name=w2k16-g2-steve \
   --pvc-size=25Gi \
   --image-path=/home/steve/images/w2k16-g2-steve.qcow2

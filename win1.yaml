@@ -1,23 +1,19 @@
 apiVersion: kubevirt.io/v1alpha3
 kind: VirtualMachine
 metadata:
-  name: linux
+  name: win1
 spec:
   running: false
   template:
     metadata:
       labels: 
-        kubevirt.io/domain: linux
+        kubevirt.io/domain: win1
     spec:
       domain:
-        firmware:
-          bootloader:
-            efi:
-              secureBoot: false
         devices:
           disks:
           - disk:
-              bus: virtio
+              bus: sata
             name: maindisk
           interfaces:
           - name: default
@@ -31,4 +27,4 @@ spec:
       volumes:
       - name: maindisk
         persistentVolumeClaim:
-          claimName: ubuntu-g2-steve
+          claimName: w2k16-g2-steve
